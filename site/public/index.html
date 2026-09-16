@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minutes and ordinances | Minerva Village Clerk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#q">Skip to search</a>
+  <header class="banner">
+    <div class="banner-inner">
+      <p>Village of Minerva, Ohio</p>
+      <h1>Village Clerk</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-inner">
+      <a href="./" aria-current="page">Minutes and ordinances</a>
+    </div>
+  </nav>
+  <main>
+    <p class="lead">Type a word. The list filters as you type. Click a row to read the record. These are the copies kept at the window. They are not certified until the clerk stamps them.</p>
+    <form id="search-form" action="#" method="get" role="search">
+      <label for="q">Search minutes and ordinances</label>
+      <input id="q" name="q" type="search" autocomplete="off" placeholder="parking, dog license, Lincoln…">
+    </form>
+    <p id="status" class="status" aria-live="polite"></p>
+    <div class="split">
+      <div class="list-wrap">
+        <table class="records">
+          <thead>
+            <tr>
+              <th>Kind</th>
+              <th>Number</th>
+              <th>Date</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty" class="empty" hidden></p>
+      </div>
+      <article id="detail" class="detail" aria-live="polite">
+        <p class="detail-hint">Click a row to read it here.</p>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p>Village Clerk, 12 W Line Street, Minerva, Ohio 44657</p>
+      <p>(330) 555-0142 - clerk@minerva.oh.example</p>
+      <p>Monday through Friday, 8:30 a.m. to 4:00 p.m. Closed 12:00 to 12:30 for lunch.</p>
+    </div>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

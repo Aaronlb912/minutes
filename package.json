@@ -1,0 +1,9 @@
+{
+  "name": "minutes",
+  "private": true,
+  "description": "Minutes and ordinance search. Type a word. Read the record.",
+  "type": "module",
+  "scripts": {
+    "start": "node site/server.js"
+  }
+}
