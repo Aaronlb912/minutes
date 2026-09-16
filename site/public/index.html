@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minutes and ordinances | Minerva Village Clerk</title>
+  <title>Minutes and ordinances</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#q">Skip to search</a>
   <header class="banner">
     <div class="banner-inner">
-      <p>Village of Minerva, Ohio</p>
-      <h1>Village Clerk</h1>
+      <p id="village-line">Village of Minerva, Ohio</p>
+      <h1 id="desk-line">Village Clerk</h1>
     </div>
   </header>
   <nav>
@@ -20,7 +20,7 @@
     </div>
   </nav>
   <main>
-    <p class="lead">Type a word. The list filters as you type. Click a row to read the record. These are the copies kept at the window. They are not certified until the clerk stamps them.</p>
+    <p class="lead">Type a word. The list filters as you type. Click a row to read the record. Add your own minutes, change the desk name, then download the folder and drop it into your own site. These copies are not certified.</p>
     <form id="search-form" action="#" method="get" role="search">
       <label for="q">Search minutes and ordinances</label>
       <input id="q" name="q" type="search" autocomplete="off" placeholder="parking, dog license, Lincoln…">
@@ -45,12 +45,101 @@
         <p class="detail-hint">Click a row to read it here.</p>
       </article>
     </div>
+
+    <form id="record-form" class="add" action="#">
+      <h2 id="record-form-title">Add a record</h2>
+      <p id="record-err" class="err" hidden></p>
+      <div class="row2">
+        <p>
+          <label for="rec-type">Kind</label>
+          <select id="rec-type">
+            <option value="Minutes">Minutes</option>
+            <option value="Ordinance">Ordinance</option>
+          </select>
+        </p>
+        <p>
+          <label for="rec-number">Number</label>
+          <input id="rec-number" type="text" autocomplete="off" placeholder="2026-12 or June 16, 2026">
+        </p>
+      </div>
+      <div class="row2">
+        <p>
+          <label for="rec-date">Date</label>
+          <input id="rec-date" type="date">
+        </p>
+        <p>
+          <label for="rec-title">Title</label>
+          <input id="rec-title" type="text" autocomplete="off">
+        </p>
+      </div>
+      <p>
+        <label for="rec-body">Text</label>
+        <textarea id="rec-body"></textarea>
+      </p>
+      <div class="actions">
+        <button type="submit" id="record-save">Add to the list</button>
+        <button type="button" class="secondary" id="record-cancel" hidden>Cancel edit</button>
+      </div>
+    </form>
+
+    <form id="desk-form" class="add" action="#">
+      <h2>This desk</h2>
+      <p class="note">Put your village on the banner. Sample Minerva text is only a starter.</p>
+      <p id="desk-err" class="err" hidden></p>
+      <div class="row2">
+        <p>
+          <label for="desk-village">Village line</label>
+          <input id="desk-village" type="text" autocomplete="organization">
+        </p>
+        <p>
+          <label for="desk-name">Desk name</label>
+          <input id="desk-name" type="text">
+        </p>
+      </div>
+      <div class="row2">
+        <p>
+          <label for="desk-street">Street</label>
+          <input id="desk-street" type="text">
+        </p>
+        <p>
+          <label for="desk-city">City, state, ZIP</label>
+          <input id="desk-place" type="text" placeholder="Minerva, Ohio 44657">
+        </p>
+      </div>
+      <div class="row2">
+        <p>
+          <label for="desk-phone">Phone</label>
+          <input id="desk-phone" type="text">
+        </p>
+        <p>
+          <label for="desk-email">Email</label>
+          <input id="desk-email" type="text">
+        </p>
+      </div>
+      <p>
+        <label for="desk-hours">Hours</label>
+        <input id="desk-hours" type="text">
+      </p>
+      <div class="actions">
+        <button type="submit">Save desk</button>
+      </div>
+    </form>
+
+    <div class="file-bar">
+      <p class="note">The tool is this page plus three files next to it. Download the folder and copy it into any website.</p>
+      <button type="button" id="kit-btn">Download folder</button>
+      <button type="button" class="secondary" id="download-btn">Download JSON only</button>
+      <button type="button" class="secondary" id="load-btn">Load JSON</button>
+      <button type="button" class="secondary" id="restore-btn">Restore sample records</button>
+      <input id="load-file" type="file" accept="application/json,.json" hidden>
+      <p id="file-msg" class="status" aria-live="polite"></p>
+    </div>
   </main>
   <footer>
     <div class="footer-inner">
-      <p>Village Clerk, 12 W Line Street, Minerva, Ohio 44657</p>
-      <p>(330) 555-0142 - clerk@minerva.oh.example</p>
-      <p>Monday through Friday, 8:30 a.m. to 4:00 p.m. Closed 12:00 to 12:30 for lunch.</p>
+      <p id="foot-addr"></p>
+      <p id="foot-contact"></p>
+      <p id="foot-hours"></p>
     </div>
   </footer>
   <script type="module" src="app.js"></script>

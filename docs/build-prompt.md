@@ -21,3 +21,6 @@ Done:
 - Clear it. The list comes back.
 
 Not in this slice: login, mail, a live .gov, PDF upload.
+
+Drop-in: `site/public/` is the whole tool. Download folder on the page
+writes `minutes-search.zip` with the current desk and records baked in.

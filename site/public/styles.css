@@ -96,18 +96,101 @@ form {
   max-width: 36rem;
 }
 
+form.add {
+  max-width: none;
+  margin-top: 1.4rem;
+}
+
+form.add h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+form.add p {
+  margin: 0;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.65rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem !important;
+}
+
 label {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.88rem;
 }
 
-input[type="search"] {
+input[type="search"],
+input[type="text"],
+input[type="date"],
+select,
+textarea {
   width: 100%;
   margin-top: 0.25rem;
   padding: 0.4rem 0.5rem;
   font: inherit;
   border: 1px solid #8a8578;
+  background: var(--white);
+}
+
+textarea {
+  min-height: 8rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.4rem 0.85rem;
+  background: var(--navy);
+  color: var(--white);
+  border: 0;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.err {
+  color: #7a2424;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  margin: 0 0 0.6rem !important;
+}
+
+.detail-actions {
+  margin: 0.9rem 0 0;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.file-bar {
+  margin-top: 1.4rem;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+
+.file-bar .status {
+  margin: 0.6rem 0 0;
 }
 
 .status {
@@ -227,6 +310,10 @@ footer p {
 
 @media (max-width: 800px) {
   .split {
+    grid-template-columns: 1fr;
+  }
+
+  .row2 {
     grid-template-columns: 1fr;
   }
 
