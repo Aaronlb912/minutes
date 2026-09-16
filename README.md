@@ -101,10 +101,3 @@ https://github.com/user-attachments/assets/ca122144-8a9a-4ece-a3b3-756cbf9d6a53
 Repo copy: [docs/media/minutes-demo.mp4](docs/media/minutes-demo.mp4)
 
 Voice is Microsoft Andrew Neural. Music is Wallpaper by Kevin MacLeod (incompetech.com), CC BY 3.0.
-
-## Unfinished
-
-Does not search a live .gov. Does not stamp a certified copy. Does not
-upload PDFs. Does not sync across computers unless you move the JSON
-file. Opening `index.html` by double-click (no server) will not load
-`records.json`. GitHub Pages is not on yet.
