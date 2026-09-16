@@ -16,7 +16,7 @@ No account. Nothing sends mail. These copies are not certified.
 
 ## Demo
 
-REPO_VIDEO_URL_PLACEHOLDER
+https://github.com/user-attachments/assets/ca122144-8a9a-4ece-a3b3-756cbf9d6a53
 
 Repo copy: [docs/media/minutes-demo.mp4](docs/media/minutes-demo.mp4)
 
